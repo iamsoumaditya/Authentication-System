@@ -64,7 +64,7 @@ export default function VerifyEmailPage({
         <TypingText
           delay={0.5}
           duration={2}
-          fontSize="text-5xl"
+          fontSize="md:text-5xl text-3xl"
           fontWeight="font-extrabold"
           color="text-gray-800 dark:text-gray-100"
           letterSpacing="tracking-wider"
@@ -77,7 +77,7 @@ export default function VerifyEmailPage({
             <TypingText
               delay={0.5}
               duration={2}
-              fontSize="text-2xl"
+              fontSize="md:text-2xl text-md"
               fontWeight="font-extrabold"
               color="text-green-800 dark:text-green-400"
               letterSpacing="tracking-wider"
@@ -87,7 +87,7 @@ export default function VerifyEmailPage({
             </TypingText>
             <Link
               href="/login"
-              className="text-xl text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors duration-200"
+              className="md:text-xl text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors duration-200"
             >
               Visit for log in
             </Link>
@@ -98,7 +98,7 @@ export default function VerifyEmailPage({
             <TypingText
               delay={0.5}
               duration={2}
-              fontSize="text-2xl"
+              fontSize="md:text-2xl text-md"
               fontWeight="font-extrabold"
               color="text-red-700 dark:text-red-400"
               letterSpacing="tracking-wider"
