@@ -12,13 +12,17 @@ import {
 import { Input } from "@/src/components/lightswind/input";
 import { ToggleTheme } from "@/src/components/ui/toggle-theme";
 import { TopLoader } from "@/src/components/lightswind/top-loader";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
-import { useSearchParams } from "next/navigation";
+import { use } from "react";
 
-export default function ResetPasswordPage() {
+
+export default function ResetPasswordPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ token?: string }>;
+}) {
   const isDark =
     typeof document !== "undefined" &&
     document.documentElement.classList.contains("dark");
@@ -31,10 +35,10 @@ export default function ResetPasswordPage() {
   const [token, setToken] = useState("");
   const [buttonDisabled, setButtonDisabled] = useState(false);
   const [loading, setLoading] = useState(false);
-  const searchParams = useSearchParams();
+  const params = use(searchParams);
 
   useEffect(() => {
-    const urlToken = searchParams.get("token");
+    const urlToken = params.token;
     setToken(urlToken || "");
   }, []);
 
